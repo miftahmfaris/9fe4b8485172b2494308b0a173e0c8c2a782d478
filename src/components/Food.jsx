@@ -44,6 +44,7 @@ const DisplayFlex = styled.div`
 
 const Price = styled(DisplayFlex)`
     justify-content: space-between;
+    align-items: center;
 
     padding: 8px 8px 8px 0;
 
@@ -59,11 +60,11 @@ const FoodContainer = styled.div`
 `;
 
 const CardDetail = styled.div`
-    padding: 8px;
+    padding: 16px;
     box-sizing: border-box;
 
     & p {
-        margin: 4px 0;
+        margin: 0;
     }
 
     & p:nth-child(2) {
@@ -95,9 +96,9 @@ const AddButton = styled(DisplayFlex)`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 4px 8px 4px 8px;
+    padding: 8px 16px 8px 16px;
     border-radius: 5px;
-    width: 75px;
+    width: 100px;
 
     & span {
         font-size: 14px;
