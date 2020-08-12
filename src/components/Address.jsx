@@ -12,10 +12,11 @@ const AddressDetail = styled.div`
     & p {
         margin: 0 0 4px 0;
         font-size: 8px;
+        color: #6e7679;
     }
 
     & span {
-        font-size: 16px;
+        font-size: 20px;
     }
 `;
 
