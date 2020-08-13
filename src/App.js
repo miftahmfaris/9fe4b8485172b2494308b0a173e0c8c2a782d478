@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Address, Food } from "./components";
+import { Address, Food, Cart } from "./components";
 
 const Layout = styled.div`
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
@@ -15,6 +15,7 @@ function App() {
         <Layout>
             <Address />
             <Food />
+            <Cart />
         </Layout>
     );
 }
