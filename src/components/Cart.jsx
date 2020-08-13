@@ -3,6 +3,8 @@ import styled from "styled-components";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import { makeStyles } from "@material-ui/core/styles";
+import { useDispatch } from "react-redux";
+import { checkOut } from "../redux/actions";
 
 const FixedDisplay = styled.div`
     position: fixed;
@@ -62,6 +64,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Cart() {
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(checkOut());
+    };
 
     return (
         <UnderDisplay>
@@ -71,7 +78,7 @@ export default function Cart() {
                         <p>5 Items | Rp. 125000</p>
                         <p>Termasuk Ongkos Kirim</p>
                     </CartPrice>
-                    <div>
+                    <div onClick={handleClick}>
                         <ShoppingCartIcon className={classes.cartIcon} />
                         <KeyboardArrowRightIcon className={classes.nextIcon} />
                     </div>

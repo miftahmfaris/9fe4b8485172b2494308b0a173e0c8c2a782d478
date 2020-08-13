@@ -6,6 +6,8 @@ import StarBorderIcon from "@material-ui/icons/StarBorder";
 import StarHalfIcon from "@material-ui/icons/StarHalf";
 import AddIcon from "@material-ui/icons/Add";
 import { makeStyles } from "@material-ui/core/styles";
+import { useDispatch } from "react-redux";
+import { addCart } from "../redux/actions";
 
 const useStyles = makeStyles((theme) => ({
     starIcon: {
@@ -107,13 +109,17 @@ const AddButton = styled(DisplayFlex)`
 
 export default function Food() {
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(addCart());
+    };
 
     return (
         <FoodContainer>
             {data.map((item) => {
-                console.log(item);
                 return (
-                    <Card>
+                    <Card key={item.id}>
                         <ContainerImage>
                             <img src={item.image} alt={item.title} />
                         </ContainerImage>
@@ -133,7 +139,7 @@ export default function Food() {
                             </p>
                             <Price>
                                 <p>Rp. {item.price.toLocaleString()}</p>
-                                <AddButton>
+                                <AddButton onClick={handleClick}>
                                     <span>ADD</span>
                                     <AddIcon className={classes.plusIcon} />
                                 </AddButton>

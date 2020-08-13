@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 import { Address, Food, Cart } from "./components";
 
@@ -11,11 +12,13 @@ const Layout = styled.div`
 `;
 
 function App() {
+    const cartStatus = useSelector((state) => state.cart);
+
     return (
         <Layout>
             <Address />
             <Food />
-            <Cart />
+            {cartStatus && <Cart />}
         </Layout>
     );
 }
