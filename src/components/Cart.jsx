@@ -75,7 +75,7 @@ export default function Cart() {
             <FixedDisplay>
                 <FlexDisplay>
                     <CartPrice>
-                        <p>5 Items | Rp. 125000</p>
+                        <p>5 Items | Rp. 125,000</p>
                         <p>Termasuk Ongkos Kirim</p>
                     </CartPrice>
                     <div onClick={handleClick}>

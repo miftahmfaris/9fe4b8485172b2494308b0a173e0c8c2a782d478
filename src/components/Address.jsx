@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Daytime from "./Daytime";
 import { useSelector } from "react-redux";
 import Modal from "./Modal";
+import Calendar from "./Calendar";
 
 const FlexAddress = styled.div`
     display: flex;
@@ -79,6 +80,7 @@ export default function Address() {
                 </AddressDetail>
             </Wrapper>
             <Modal open={open} onClose={handleClose} />
+            <Calendar />
             {position < 200 && <Daytime />}
         </Container>
     );

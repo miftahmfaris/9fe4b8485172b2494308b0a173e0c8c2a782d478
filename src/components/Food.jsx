@@ -2,12 +2,12 @@ import React from "react";
 import data from "../data";
 import styled from "styled-components";
 import StarIcon from "@material-ui/icons/Star";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 import StarHalfIcon from "@material-ui/icons/StarHalf";
 import AddIcon from "@material-ui/icons/Add";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/actions";
+import Date from "./Date";
 
 const useStyles = makeStyles((theme) => ({
     starIcon: {
@@ -59,7 +59,7 @@ const FoodContainer = styled.div`
     border-radius: 10px;
     padding: 16px;
     box-sizing: border-box;
-    margin-top: 100px;
+    margin-top: 190px;
 `;
 
 const CardDetail = styled.div`
@@ -118,6 +118,7 @@ export default function Food() {
 
     return (
         <FoodContainer>
+            <Date />
             {data.map((item) => {
                 return (
                     <Card key={item.id}>
