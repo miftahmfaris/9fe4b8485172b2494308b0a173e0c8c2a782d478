@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useCallback } from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Address, Food, Cart } from "./components";
+import { setPosition } from "./redux/actions";
 
 const Layout = styled.div`
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
@@ -13,12 +14,26 @@ const Layout = styled.div`
 
 function App() {
     const cartStatus = useSelector((state) => state.cart);
+    const dispatch = useDispatch();
+
+    const handleScroll = useCallback(() => {
+        const currentPosition = window.pageYOffset;
+        dispatch(setPosition(currentPosition));
+    }, [dispatch]);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [handleScroll]);
 
     return (
         <Layout>
             <Address />
             <Food />
-            {cartStatus && <Cart />}
+            {cartStatus === true && <Cart />}
         </Layout>
     );
 }
