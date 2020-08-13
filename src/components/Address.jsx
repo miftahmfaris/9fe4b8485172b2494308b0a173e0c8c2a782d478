@@ -3,9 +3,15 @@ import styled from "styled-components";
 import BackIcon from "@material-ui/icons/KeyboardBackspace";
 import ExpandIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
+import Daytime from "./Daytime";
+import { useSelector } from "react-redux";
 
 const FlexAddress = styled.div`
     display: flex;
+`;
+
+const Wrapper = styled(FlexAddress)`
+    margin-top: 16px;
 `;
 
 const AddressDetail = styled.div`
@@ -36,21 +42,34 @@ const FlexCenter = styled(FlexAddress)`
     margin-right: 16px;
 `;
 
+const Container = styled.div`
+    position: fixed;
+    background: white;
+    height: 100px;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+`;
+
 export default function Address() {
     const classes = useStyles();
+    const position = useSelector((state) => state.position);
 
     return (
-        <FlexAddress>
-            <FlexCenter>
-                <BackIcon className={classes.backIcon} />
-            </FlexCenter>
-            <AddressDetail>
-                <p>ALAMAT PENGANTARAN</p>
-                <FlexAddress>
-                    <span>Tokopedia Tower</span>
-                    <ExpandIcon className={classes.expandIcon} />
-                </FlexAddress>
-            </AddressDetail>
-        </FlexAddress>
+        <Container>
+            <Wrapper>
+                <FlexCenter>
+                    <BackIcon className={classes.backIcon} />
+                </FlexCenter>
+                <AddressDetail>
+                    <p>ALAMAT PENGANTARAN</p>
+                    <FlexAddress>
+                        <span>Tokopedia Tower</span>
+                        <ExpandIcon className={classes.expandIcon} />
+                    </FlexAddress>
+                </AddressDetail>
+            </Wrapper>
+            {position < 200 && <Daytime />}
+        </Container>
     );
 }

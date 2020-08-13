@@ -59,6 +59,7 @@ const FoodContainer = styled.div`
     border-radius: 10px;
     padding: 16px;
     box-sizing: border-box;
+    margin-top: 100px;
 `;
 
 const CardDetail = styled.div`

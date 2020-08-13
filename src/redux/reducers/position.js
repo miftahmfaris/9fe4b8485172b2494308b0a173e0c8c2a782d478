@@ -1,6 +1,6 @@
 import { SET_POSITION } from "../actions";
 
-const initialState = {};
+const initialState = 0;
 
 export default (state = initialState, actions) => {
     switch (actions.type) {
