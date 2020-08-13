@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/main.32bdad5c.chunk.js",
-    "main.js.map": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/main.32bdad5c.chunk.js.map",
+    "main.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/main.6887d314.chunk.js",
+    "main.js.map": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/main.6887d314.chunk.js.map",
     "runtime-main.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/runtime-main.10d0b438.js",
     "runtime-main.js.map": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/runtime-main.10d0b438.js.map",
-    "static/js/2.8b54f9f6.chunk.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/2.8b54f9f6.chunk.js",
-    "static/js/2.8b54f9f6.chunk.js.map": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/2.8b54f9f6.chunk.js.map",
+    "static/css/2.63f0631f.chunk.css": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/css/2.63f0631f.chunk.css",
+    "static/js/2.a2489bb6.chunk.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/2.a2489bb6.chunk.js",
+    "static/js/2.a2489bb6.chunk.js.map": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/2.a2489bb6.chunk.js.map",
     "index.html": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/index.html",
-    "precache-manifest.43461e94e2a4350865f1a9e393e8f79f.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/precache-manifest.43461e94e2a4350865f1a9e393e8f79f.js",
+    "precache-manifest.4fa8c39f723f1735623f8a7b3353adeb.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/precache-manifest.4fa8c39f723f1735623f8a7b3353adeb.js",
     "service-worker.js": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/service-worker.js",
-    "static/js/2.8b54f9f6.chunk.js.LICENSE.txt": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/2.8b54f9f6.chunk.js.LICENSE.txt",
+    "static/css/2.63f0631f.chunk.css.map": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/css/2.63f0631f.chunk.css.map",
+    "static/js/2.a2489bb6.chunk.js.LICENSE.txt": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/js/2.a2489bb6.chunk.js.LICENSE.txt",
     "static/media/ice_cream.jpg": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/media/ice_cream.bc0db18c.jpg",
     "static/media/pancake.jpg": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/media/pancake.e7648beb.jpg",
     "static/media/pizza.jpg": "/9fe4b8485172b2494308b0a173e0c8c2a782d478/static/media/pizza.2a96d14b.jpg",
@@ -18,7 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.10d0b438.js",
-    "static/js/2.8b54f9f6.chunk.js",
-    "static/js/main.32bdad5c.chunk.js"
+    "static/css/2.63f0631f.chunk.css",
+    "static/js/2.a2489bb6.chunk.js",
+    "static/js/main.6887d314.chunk.js"
   ]
 }
