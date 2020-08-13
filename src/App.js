@@ -6,8 +6,6 @@ import { Address, Food, Cart } from "./components";
 import { setPosition } from "./redux/actions";
 
 const Layout = styled.div`
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
-
     font-family: "Noto Sans SC", sans-serif;
     color: #424749;
 `;

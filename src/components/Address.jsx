@@ -5,13 +5,14 @@ import ExpandIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
 import Daytime from "./Daytime";
 import { useSelector } from "react-redux";
+import Modal from "./Modal";
 
 const FlexAddress = styled.div`
     display: flex;
 `;
 
 const Wrapper = styled(FlexAddress)`
-    margin-top: 16px;
+    margin: 16px 0;
 `;
 
 const AddressDetail = styled.div`
@@ -45,7 +46,6 @@ const FlexCenter = styled(FlexAddress)`
 const Container = styled.div`
     position: fixed;
     background: white;
-    height: 100px;
     top: 0px;
     width: 100%;
     left: 0px;
@@ -53,7 +53,16 @@ const Container = styled.div`
 
 export default function Address() {
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
     const position = useSelector((state) => state.position);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (value) => {
+        setOpen(false);
+    };
 
     return (
         <Container>
@@ -61,7 +70,7 @@ export default function Address() {
                 <FlexCenter>
                     <BackIcon className={classes.backIcon} />
                 </FlexCenter>
-                <AddressDetail>
+                <AddressDetail onClick={handleClickOpen}>
                     <p>ALAMAT PENGANTARAN</p>
                     <FlexAddress>
                         <span>Tokopedia Tower</span>
@@ -69,6 +78,7 @@ export default function Address() {
                     </FlexAddress>
                 </AddressDetail>
             </Wrapper>
+            <Modal open={open} onClose={handleClose} />
             {position < 200 && <Daytime />}
         </Container>
     );
